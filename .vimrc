@@ -50,6 +50,15 @@ onoremap il" :<c-u>normal! F"vi"<cr>
 onoremap in' :<c-u>normal! f'vi'<cr>
 onoremap il' :<c-u>normal! F'vi'<cr>
 
+nnoremap <leader>[ :execute "leftabove vsplit " . bufname("#")<cr>
+nnoremap <leader>] :execute "rightbelow vsplit " . bufname("#")<cr>
+
+" Grep for WORD and open quickfix window to display result
+" nnoremap <leader>g :silent execute "grep! -R " shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
+
+nnoremap ]q :execute "cnext"<cr>
+nnoremap [q :execute "cprevious"<cr>
+
 " }}}
 " =============================================================================
 " {{{ Auto Commands 
@@ -80,4 +89,6 @@ set statusline+=%4l/%2c
 " =============================================================================
 syntax on
 
+set wildmenu
 set foldlevelstart=0
+
