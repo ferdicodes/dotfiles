@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ ! -d "$HOME/dotfiles/vim-config" ]; then
+if [ ! -d "$HOME/.vimconf" ]; then
     echo "Installing vim config..."
     git clone --depth=1 https://github.com/ferdicodes/dotfiles "$HOME/.vimconf"
 
