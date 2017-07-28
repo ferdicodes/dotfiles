@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ ! -d "$HOME/.vimconf" ]; then
     echo "Installing vim config..."
