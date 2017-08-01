@@ -46,7 +46,6 @@ removeSymLink() {
 }
 
 doInstall() {
-    echo "do install stuff here..."
     # clone the repo
     git clone --depth=1 https://github.com/ferdicodes/dotfiles "$HOME/.vimconf"
 
@@ -86,12 +85,12 @@ if [ ! -d "$HOME/.vimconf" ]; then
     echo "Installing vim config..."
 
     # If a vimrc a exists (or a symlink to a vimrc) handle it apropriately
-    if [ $(hasVimrc) -eq 1 ] || [ $(hasSymlink) -eq 1 ]; then
+    if [ $(hasVimrc) == 1 ] || [ $(hasSymlink) == 1 ]; then
         if [ $(hasSymlink) -eq 1 ]; then
             read -p 'Symlink for .vimrc detected, unlink it?(y/n) ' has_symlink_res
             symlink_res=$(howToProceed)
 
-            if [[ $symlink_res && $symlink_res -eq 1 ]]; then
+            if [[ $symlink_res && $symlink_res == 1 ]]; then
                 removeSymLink
                 doInstall
             fi
@@ -99,7 +98,7 @@ if [ ! -d "$HOME/.vimconf" ]; then
             read -p '.vimrc detected in $HOME, back it up in ~/.vimconf-backup?(y/n) ' has_vimrc_res
             vimrc_res=$(howToProceed)
 
-            if [[ $vimrc_res && $vimrc_res -eq 1 ]]; then
+            if [[ $vimrc_res && $vimrc_res == 1 ]]; then
                 backupVimrc
                 doInstall
             fi
