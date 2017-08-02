@@ -74,7 +74,7 @@ set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:< "}}}
 " ===== General
 let g:prettier#exec_cmd_async=1
 let g:prettier#quickfix_enable=0
-let g:prettier#autoformat
+let g:prettier#autoformat=0
 
 " ===== Formatting
 let g:prettier#config#semi='false'
