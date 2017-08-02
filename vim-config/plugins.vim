@@ -22,6 +22,10 @@ Plug 'mxw/vim-jsx'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
+Plug 'eslint/eslint'
+Plug 'prettier/vim-prettier', {
+    \ 'do': 'yarn install',
+    \ 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql'] }
 
 " }}}
 " ==============================================================================
@@ -31,7 +35,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'joshdick/onedark.vim'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline-themes'
 
 " }}}
 " ==============================================================================

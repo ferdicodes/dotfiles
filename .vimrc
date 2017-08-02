@@ -29,12 +29,14 @@ au BufNewFile,BufRead *.py,*.c,*.cpp
 
 au BufNewFile,BufRead *
   \ set tabstop=4 |
+  \ set shiftwidth=4 |
   \ set autoindent |
   \ set expandtab |
 
 " Indentation for fullstack
-au BufNewFile,BufRead *.js,*.html,*.css,*.scss
+au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.html,*.css,*.scss
   \ set tabstop=2 |
+  \ set shiftwidth=2 |
   \ set softtabstop=2 |
   \ set shiftwidth=2 |
   \ set expandtab " }}}
@@ -68,6 +70,24 @@ set wildmenu
 set foldlevelstart=0
 set list
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:< "}}}
+" ===== Prettier Config {{{
+" ===== General
+let g:prettier#exec_cmd_async=1
+let g:prettier#quickfix_enable=0
+let g:prettier#autoformat
+
+" ===== Formatting
+let g:prettier#config#semi='false'
+let g:prettier#config#bracket_spacing='true'
+" }}}
+" ===== Linting {{{
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_loc_list_height=5
+let g:syntastic_auto_loc_list=0
+let g:syntastic_check_on_open=0
+let g:syntastic_check_on_wq=0
+" }}}
 
 " ==============================================================================
 source $HOME/.config/vim/keybinds.vim
