@@ -18,14 +18,18 @@ Plug 'tomtom/tcomment_vim'        " Easy Comments
 " ==============================================================================
 " {{{ Language Plugins
 " =====================
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx' 
+Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'eslint/eslint'
+Plug 'sbdchd/neoformat'
 Plug 'prettier/vim-prettier', {
-    \ 'do': 'yarn install',
-    \ 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql'] }
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'javascript.jsx', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+Plug 'Quramy/tsuquyomi'
+
 
 " }}}
 " ==============================================================================
@@ -35,6 +39,10 @@ Plug 'Yggdroot/indentLine'
 Plug 'joshdick/onedark.vim'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
+Plug 'zeis/vim-kolor'
+Plug 'flazz/vim-colorschemes'
+Plug 'vim-airline/vim-airline-themes'
 
 " }}}
 " ==============================================================================
@@ -43,4 +51,3 @@ call plug#end()
 
 " }}}
 " ==============================================================================
-

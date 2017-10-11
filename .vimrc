@@ -34,7 +34,7 @@ au BufNewFile,BufRead *
   \ set expandtab |
 
 " Indentation for fullstack
-au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.html,*.css,*.scss
+au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.html,*.css,*.scss,*.json
   \ set tabstop=2 |
   \ set shiftwidth=2 |
   \ set softtabstop=2 |
@@ -68,17 +68,21 @@ set wildignore=*/tmp/*,*/node_modules/*,*.so,*.swp,*zip " }}}
 set nowrap
 set wildmenu
 set foldlevelstart=0
+set mouse=a
 set list
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:< "}}}
-" ===== Prettier Config {{{
-" ===== General
-let g:prettier#exec_cmd_async=1
-let g:prettier#quickfix_enable=0
+" ===== Prettier Settings {{
 let g:prettier#autoformat=0
 
-" ===== Formatting
+let g:prettier#config#print_width=80
+let g:prettier#config#tab_width=2
+let g:prettier#config#use_tabs='false'
 let g:prettier#config#semi='false'
+let g:prettier#config#single_quote='true'
 let g:prettier#config#bracket_spacing='true'
+let g:prettier#config#jsx_bracket_same_line='true'
+let g:prettier#config#trailing_comma='all'
+let g:prettier#config#parser='flow'
 " }}}
 " ===== Linting {{{
 let g:syntastic_javascript_checkers=['eslint']
@@ -87,6 +91,9 @@ let g:syntastic_loc_list_height=5
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=0
+" }}}
+" ===== NERDTree Ignores {{{
+let NERDTreeIgnore=['node_modules', '\.lock$', '\.d\.ts']
 " }}}
 
 " ==============================================================================
