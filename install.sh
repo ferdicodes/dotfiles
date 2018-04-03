@@ -47,7 +47,7 @@ removeSymLink() {
 
 doInstall() {
     # clone the repo
-    git clone --depth=1 https://github.com/ferdicodes/dotfiles "$HOME/.vimconf"
+    git clone --depth=1 https://github.com/ferdipret/vimconfig "$HOME/.vimconf"
 
     # if the config path doesn't exist, we'll create it first
     if [ ! -d "$HOME/.config/vim" ]; then
