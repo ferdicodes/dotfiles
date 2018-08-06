@@ -1,8 +1,4 @@
-### 🔧.FILES ###
-
-This is a snapshot of my dot files. Please note, whilst there is an `install.sh` script , it's really intended for my own use.
-
-##### That said: #####
+##### My Vim Config #####
 
 You are welcome to have a look around and use whatever you like, or:
 
