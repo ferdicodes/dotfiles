@@ -71,7 +71,7 @@ set foldlevelstart=0
 set mouse=a
 set list
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:< "}}}
-" ===== Prettier Settings {{
+" ===== Prettier Settings {{{
 let g:prettier#autoformat=0
 
 let g:prettier#config#print_width=80
@@ -84,6 +84,11 @@ let g:prettier#config#jsx_bracket_same_line='true'
 let g:prettier#config#trailing_comma='all'
 let g:prettier#config#parser='flow'
 " }}}
+" ===== ALE Settings {{{
+let g:ale_fixers = {
+    \'javascript': ['eslint']
+    \}
+" }}}
 " ===== Linting {{{
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_always_populate_loc_list=1
@@ -93,7 +98,7 @@ let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=0
 " }}}
 " ===== NERDTree Ignores {{{
-let NERDTreeIgnore=['node_modules', '\.lock$', '\.d\.ts']
+let NERDTreeIgnore=['node_modules', '\.lock$']
 " }}}
 
 " ==============================================================================

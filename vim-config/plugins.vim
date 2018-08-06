@@ -13,6 +13,7 @@ Plug 'easymotion/vim-easymotion'  " Movement shortcuts
 Plug 'mattn/emmet-vim'            " It's Emmet
 Plug 'shougo/neocomplete.vim'     " Auto completion
 Plug 'tomtom/tcomment_vim'        " Easy Comments
+Plug 'tpope/vim-surround'         " Some easy surround options
 
 " }}}
 " ==============================================================================
@@ -29,7 +30,8 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'javascript.jsx', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 Plug 'Quramy/tsuquyomi'
-
+Plug 'w0rp/ale'
+Plug 'jparise/vim-graphql'
 
 " }}}
 " ==============================================================================
@@ -43,6 +45,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'zeis/vim-kolor'
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'szorfein/darkest-space'
 
 " }}}
 " ==============================================================================

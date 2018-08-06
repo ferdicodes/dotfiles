@@ -65,6 +65,8 @@ nnoremap [q :execute "cprevious"<cr>
 " }}}
 " ===== {{{ NeoComplete
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-"
+" }}}
+" ===== {{{ ALEFix
+nmap <leader>d <Plug>(ale_fix)
 " }}}
 
